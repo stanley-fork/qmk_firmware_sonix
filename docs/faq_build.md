@@ -19,7 +19,7 @@ Note that running `make` with `sudo` is generally ***not*** a good idea, and you
 
 ### Linux `udev` Rules {#linux-udev-rules}
 
-On Linux, you'll need proper privileges to communicate with the bootloader device. You can either use `sudo` when flashing firmware (not recommended), or install the udev rules from the [qmk_udev](https://github.com/qmk/qmk_udev) repository by running:
+On Linux, you'll need proper privileges to communicate with the bootloader device. You can either use `sudo` when flashing firmware (not recommended), or install the udev rules from the [qmk_udev](https://github.com/SonixQMK/qmk_udev) repository by running:
 
 ```
 util/install_udev.sh

@@ -80,14 +80,14 @@ trap 'rm -rf "$tmpdir"' EXIT
 
 # Get the latest qmk_udev release
 echo "Fetching latest qmk_udev release..." >&2
-latest_release=$(github_api_call repos/qmk/qmk_udev/releases/latest | grep -oE '"tag_name": "[^"]+' | grep -oE '[^"]+$')
+latest_release=$(github_api_call repos/SonixQMK/qmk_udev/releases/latest | grep -oE '"tag_name": "[^"]+' | grep -oE '[^"]+$')
 if [ -z "$latest_release" ]; then
     echo "Could not determine latest qmk_udev release." >&2
     exit 1
 fi
 echo "Using qmk_udev release: $latest_release" >&2
 
-release_base="https://github.com/qmk/qmk_udev/releases/download/$latest_release"
+release_base="https://github.com/SonixQMK/qmk_udev/releases/download/$latest_release"
 
 # Download the udev rules file and architecture-appropriate qmk_id binary
 download_url "$release_base/50-qmk.rules" "$tmpdir/50-qmk.rules"
